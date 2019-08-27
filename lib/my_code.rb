@@ -11,8 +11,7 @@ end
 
 def reduce(array, starting_point=nil)
   starting_point ? single_value = starting_point, counter = 0 : single_value = array[0], counter = 1
-  end
-  while counter < array.length
+  while array[counter]
     single_value = yield(single_value, array[counter])
     counter+=1
   end
