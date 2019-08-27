@@ -20,7 +20,7 @@ def reduce(array, starting_point=nil)
     single_value = array[0]
     counter = 1
   end
-  while array[counter]
+  while counter < array.length
     single_value = yield(single_value, array[counter])
     counter+=1
   end
