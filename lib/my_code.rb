@@ -9,9 +9,6 @@ end
 new_array
 end
 
-
-
-
 def reduce(array, starting_point=nil)
   if starting_point
     single_value = starting_point
