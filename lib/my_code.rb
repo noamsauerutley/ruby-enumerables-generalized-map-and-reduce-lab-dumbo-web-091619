@@ -10,7 +10,13 @@ new_array
 end
 
 def reduce(array, starting_point=nil)
-  starting_point ? single_value = starting_point, counter = 0 : single_value = array[0], counter = 1
+  if starting_point
+    single_value = starting_point
+    counter = 0
+  else
+    single_value = array[0]
+    counter = 1
+  end
   while array[counter]
     single_value = yield(single_value, array[counter])
     counter+=1
